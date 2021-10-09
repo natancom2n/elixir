@@ -1,0 +1,28 @@
+<h1>Lista de Compras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Preço</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for prod <- @lista do %>
+    <tr>
+      <td><%= prod.produto %></td>
+      <td><%= prod.price %></td>
+
+      <td>
+        <span><%= link " ", to: Routes.prod_path(@conn, :show, prod) %></span>
+        <span><%= link "Edit", to: Routes.prod_path(@conn, :edit, prod) %></span>
+        <span><%= link "Delete", to: Routes.prod_path(@conn, :delete, prod), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "Adicionar Produto", to: Routes.prod_path(@conn, :new) %></span>

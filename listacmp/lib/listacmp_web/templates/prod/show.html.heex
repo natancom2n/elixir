@@ -1,0 +1,18 @@
+<h1>Produto</h1>
+
+<ul>
+
+  <li>
+    <strong>Produto:</strong>
+    <%= @prod.produto %>
+  </li>
+
+  <li>
+    <strong>Preço:</strong>
+    <%= @prod.price %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.prod_path(@conn, :edit, @prod) %></span> |
+<span><%= link "Voltar", to: Routes.prod_path(@conn, :index) %></span>

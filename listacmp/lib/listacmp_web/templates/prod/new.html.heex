@@ -1,0 +1,5 @@
+<h1>Adicione novo produto</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.prod_path(@conn, :create)) %>
+
+<span><%= link "Voltar", to: Routes.prod_path(@conn, :index) %></span>
