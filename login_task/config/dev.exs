@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :login_task, LoginTask.Repo,
-  username: "postgres",
-  password: "315462",
+  username: "mac-natan",
+  password: "",
   database: "login_task_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
